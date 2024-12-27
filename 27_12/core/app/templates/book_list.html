@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<a class="btn btn-success" href="{% url 'book-create' %}">Добавить</a>
+    <ul class="list-group">
+        {% for book_item in books %}
+        <li class="list-group-item">
+            <a href="#">{{ book_item.full_name }}</a>
+            <a href="{% url 'book-update' book.pk %}">knopka</a>
+            <a href="{% url 'book-update' book.pk %}">udalet</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
